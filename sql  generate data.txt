@@ -1,0 +1,123 @@
+-- Create the Programs table
+CREATE TABLE Programs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
+-- Create the Subjects table
+CREATE TABLE Subjects (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    program_id INT,
+    FOREIGN KEY (program_id) REFERENCES Programs(id) ON DELETE CASCADE
+);
+
+-- Insert data into Programs and Subjects
+INSERT INTO Programs (name) VALUES
+('Business Administration'),
+('Information Technology'),
+('Medicine'),
+('Engineering'),
+('Law'),
+('Computer Science'),
+('Economics'),
+('Agriculture'),
+('Environmental Science'),
+('Biotechnology'),
+('Cyber Security'),
+('Digital Forensics'),
+('Education'),
+('Tourism and Hospitality'),
+('Renewable Energy'),
+('Multimedia Technology'),
+('Art in Economics and Statistics'),
+('Art in Environmental Economics and Policy'),
+('Arts in Economics'),
+('Arts in Economics and Sociology'),
+('Commerce in Accounting'),
+('Commerce in Entrepreneurship'),
+('Commerce in Finance'),
+('Commerce in Human Resource Management'),
+('Commerce in International Business'),
+('Commerce in Marketing'),
+('Education in Administration and Management'),
+('Education in Adult Education and Community'),
+('Education in Arts'),
+('Education in Science'),
+('Science in Computer Engineering'),
+('Science in Cyber Security'),
+('Science in Renewable Energy Engineering'),
+('Science in Applied Geology'),
+('Science in Statistics'),
+('Science in Software Engineering'),
+('Science in Telecommunications Engineering'),
+('Philosophy in Economics'),
+('Philosophy in Business Administration');
+
+-- Insert subjects into Subjects table
+INSERT INTO Subjects (name, program_id)
+VALUES
+    -- Business Administration
+    ('History', 1), ('Geography', 1), ('Maths', 1), ('Civics', 1), ('Bookkeeping', 1), 
+    ('Commerce', 1), ('Economics', 1), ('Management', 1), ('Leadership', 1),
+    
+    -- Information Technology
+    ('Maths', 2), ('Physics', 2), ('Biology', 2), ('Electronics', 2), ('Geography', 2), 
+    ('Programming', 2), ('Web Development', 2), ('Networking', 2),
+    
+    -- Medicine
+    ('Biology', 3), ('Chemistry', 3), ('Physics', 3), ('Maths', 3), ('General Studies', 3), 
+    ('Anatomy', 3), ('Physiology', 3), ('Biostatistics', 3), ('Pharmacology', 3),
+    
+    -- Engineering
+    ('Maths', 4), ('Physics', 4), ('Chemistry', 4), ('Technical Drawing', 4), ('Electronics', 4), 
+    ('Mechanics', 4), ('Material Science', 4), ('Design', 4),
+    
+    -- Law
+    ('History', 5), ('Civics', 5), ('English Literature', 5), ('General Studies', 5), 
+    ('Geography', 5), ('Constitutional Law', 5), ('Criminal Law', 5), ('Ethics', 5),
+    
+    -- Computer Science
+    ('Maths', 6), ('Physics', 6), ('Programming', 6), ('Electronics', 6), ('Geography', 6), 
+    ('Data Structures', 6), ('AI', 6), ('Machine Learning', 6), ('Algorithms', 6),
+    
+    -- Economics
+    ('Maths', 7), ('Economics', 7), ('Civics', 7), ('History', 7), ('Geography', 7), 
+    ('Statistics', 7), ('Microeconomics', 7), ('Macroeconomics', 7),
+
+    -- Agriculture
+    ('Biology', 8), ('Chemistry', 8), ('Agriculture', 8), ('Geography', 8), ('Physics', 8), 
+    ('Soil Science', 8), ('Horticulture', 8), ('Crop Production', 8),
+
+    -- Environmental Science
+    ('Biology', 9), ('Geography', 9), ('Environmental Studies', 9), ('Chemistry', 9), ('Physics', 9), 
+    ('Ecology', 9), ('Climate Change', 9), ('Sustainability', 9),
+
+    -- Biotechnology
+    ('Biology', 10), ('Chemistry', 10), ('Genetics', 10), ('Microbiology', 10), 
+    ('Molecular Biology', 10), ('Bioinformatics', 10), ('Physics', 10), ('Maths', 10),
+
+    -- Cyber Security
+    ('Programming', 11), ('Networking', 11), ('Ethical Hacking', 11), ('Maths', 11), 
+    ('Physics', 11), ('Cryptography', 11), ('Information Security', 11), ('AI', 11),
+
+    -- Remaining programs and their subjects...
+    ('Networking', 12), ('Law', 12), ('Maths', 12), ('Programming', 12), ('Investigation Techniques', 12),
+    ('Cyber Crime', 12), ('Data Recovery', 12), ('Digital Systems', 12);
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------
+query ya kuselect masomo yaliyo kwenye program ni
+
+select programs.name, subjects.name from programs,subjects WHERE programs.name="Business Administration";

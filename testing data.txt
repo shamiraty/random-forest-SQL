@@ -1,0 +1,10 @@
+Civics,Leadership,General Studies,History   ARTS
+
+Constitutional Law, General Studies,Physics, Maths  
+
+Maths, Biology, Physics, Chemistry,
+
+Accounting, Auditing,Taxation
+
+Programming, Electronics, Physics, Chemistry,
+
