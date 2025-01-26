@@ -1,4 +1,10 @@
-# RANDOM FOREST CLASSIFIER: High School Subject to Program Recommendation
+## RANDOM FOREST CLASSIFIER ML
+### THE CLASSIFICATION AND REGRESSION TREES (CART) ALGORITHM
+#### HIGH SCHOOL SUBJECT TO PROGRAM RECOMMENDATION
+
+## Live Demo
+You can try the **Random Forest Classifier** application for program recommendations using the following live demo link:
+[**Live Demo: Random Forest Classifier**](https://random-forest-sql.streamlit.app/)
 
 ## Introduction
 
